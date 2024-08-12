@@ -1,0 +1,47 @@
+.navbar {
+    background: #38454a;
+    border-bottom: 4px solid #ff962f;
+    padding: 0;
+
+    .searchHeader {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    position: relative;
+    
+    input {
+        background: transparent;
+        border: none;
+    }
+    i {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+li {
+    position: relative;
+    padding: 11px 10px;
+    transition: 0.4s;
+    a {
+        padding: 5px 0;
+
+    }
+    li{
+        a {
+            padding: 0;
+        }
+    } 
+}
+
+a.nav-link {
+    color: #fff;
+    transition: 0.4s;
+}
+
+li.active , li:hover {
+    background: #ff962f;
+}
+
+}

@@ -1,0 +1,356 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<div class="containerWrap">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="product_search">
+        <div class="productClient">
+          <p>Client/Site </p>
+          <kendo-multiselecttree
+            placeholder="Select Client"
+            [checkAll]="true"
+            kendoMultiSelectTreeExpandable
+            [kendoMultiSelectTreeHierarchyBinding]="productclient"
+            textField="text"
+            valueField="id"
+            childrenField="items"
+          >
+          </kendo-multiselecttree>
+        </div>
+
+        <div class="productDropdown">
+          <p>Product </p>
+          <kendo-dropdownlist
+            defaultItem="Select Product"
+            [data]="ProductDropdown"
+            [valuePrimitive]="true"
+          >
+          </kendo-dropdownlist>
+        </div>
+
+        <div class="dateDropdown">
+          <p>Date Range/Campaign</p>
+          <kendo-datepicker [value]="dateValue"></kendo-datepicker>
+        </div>
+
+        <div class="productButton">
+          <button kendoButton>Search</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="SparklineChart SparklineChartbg1">
+        <h4>Total Cost</h4>
+        <h5>125</h5>
+        <i class="fa fa-bar-chart" aria-hidden="true"></i>
+        <kendo-sparkline
+          [data]="spark1"
+          type="column"
+          [chartArea]="chartArea"
+          [seriesDefaults]="seriesDefaults"
+        >
+        </kendo-sparkline>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="SparklineChart SparklineChartbg2">
+        <h4>Spots</h4>
+        <h5>90</h5>
+        <i class="fa fa-line-chart" aria-hidden="true"></i>
+        <kendo-sparkline
+          [data]="spark2"
+          type="area"
+          [chartArea]="chartArea"
+          [seriesDefaults]="seriesDefaults"
+        >
+        </kendo-sparkline>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="SparklineChart SparklineChartbg3">
+        <h4>Impacts</h4>
+        <h5>212</h5>
+        <i class="fa fa-pie-chart" aria-hidden="true"></i>
+        <kendo-sparkline
+          [data]="spark3"
+          type="column"
+          [chartArea]="chartArea"
+          [seriesDefaults]="seriesDefaults"
+        >
+        </kendo-sparkline>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="SparklineChart SparklineChartbg4">
+        <h4>Client Cost</h4>
+        <h5>54</h5>
+        <i class="fa fa-area-chart" aria-hidden="true"></i>
+        <kendo-sparkline
+          [data]="spark4"
+          type="column"
+          [chartArea]="chartArea"
+          [seriesDefaults]="seriesDefaults"
+        >
+        </kendo-sparkline>
+      </div>
+    </div>
+
+    <div class="col-md-6 mt-4">
+      <div class="wrapper spotterChartWrap">
+        <ul class="nav chartIcons">
+          <li class="nav-item">
+            <div class="kpi_spotterBtn" (click)="onClick()">
+              KPI <i class="fa fa-cog" aria-hidden="true"></i>
+            </div>
+            <ng-container *ngIf="kpiSpotterPopup">
+              <div class="kpiSpotterPopup">
+                <div class="row">
+                  <label for="kpi" class="col-sm-2 col-form-label">KPI</label>
+                  <div class="col-sm-10">
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Impacts</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button type="button" class="btn text-center mt-2 mx-3 mb-2">
+                  Submit
+                </button>
+                <button type="button" class="btn text-center mt-2 mb-2">
+                  Cancel
+                </button>
+              </div>
+            </ng-container>
+          </li>
+          <li class="nav-item">
+            <i
+              class="fa fa-info-circle"
+              title="Active campaigns Info"
+              aria-hidden="true"
+              kendoPopoverAnchor
+              [popover]="campaignsPopover"
+            ></i>
+            <kendo-popover
+              #campaignsPopover
+              [width]="300"
+              position="bottom"
+              class="campaignsPopover"
+            >
+              <ng-template kendoPopoverTitleTemplate>
+                <div class="popover-title">Active campaigns Info</div>
+              </ng-template>
+
+              <ng-template kendoPopoverBodyTemplate>
+                <div>
+                  <p>{{ popOvercontent }}</p>
+                </div>
+              </ng-template>
+            </kendo-popover>
+          </li>
+        </ul>
+        <kendo-tabstrip>
+          <kendo-tabstrip-tab [selected]="true">
+            <ng-template kendoTabTitle>
+              <i class="fa fa-pie-chart" aria-hidden="true"></i>
+            </ng-template>
+            <ng-template kendoTabContent>
+              <kendo-chart title="Campaign Status by Impacts">
+                <kendo-chart-legend position="bottom"></kendo-chart-legend>
+                <kendo-chart-series>
+                  <kendo-chart-series-item
+                    type="pie"
+                    [data]="pieData"
+                    field="value"
+                    categoryField="category"
+                    [labels]="{ visible: true, content: labelContent }"
+                  >
+                  </kendo-chart-series-item>
+                </kendo-chart-series>
+              </kendo-chart>
+            </ng-template>
+          </kendo-tabstrip-tab>
+
+          <kendo-tabstrip-tab>
+            <ng-template kendoTabTitle>
+              <i class="fa fa-table" aria-hidden="true"></i>
+            </ng-template>
+            <ng-template kendoTabContent>
+              <kendo-grid [kendoGridBinding]="gridData" [height]="350">
+                <kendo-grid-column
+                  *ngFor="let column of columns"
+                  field="{{ column.field }}"
+                  title="{{ column.title }}"
+                  format="{{ column.format }}"
+                  [filter]="column.type"
+                ></kendo-grid-column>
+              </kendo-grid>
+            </ng-template>
+          </kendo-tabstrip-tab>
+        </kendo-tabstrip>
+      </div>
+    </div>
+
+    <div class="col-md-6 mt-4 costVariance">
+        <ul class="nav chartIcons me-3">
+            <li class="nav-item">
+              <div class="kpi_spotterBtn" (click)="onClick()">
+                KPI <i class="fa fa-cog" aria-hidden="true"></i>
+              </div>
+              <ng-container *ngIf="kpiSpotterPopup">
+                <div class="kpiSpotterPopup">
+                  <div class="row">
+                    <label for="kpi" class="col-sm-2 col-form-label">KPI</label>
+                    <div class="col-sm-10">
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Impacts</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+  
+                  <button type="button" class="btn text-center mt-2 mx-3 mb-2">
+                    Submit
+                  </button>
+                  <button type="button" class="btn text-center mt-2 mb-2">
+                    Cancel
+                  </button>
+                </div>
+              </ng-container>
+            </li>
+            <li class="nav-item">
+              <i
+                class="fa fa-info-circle"
+                title="Active campaigns Info"
+                aria-hidden="true"
+                kendoPopoverAnchor
+                [popover]="campaignsPopover"
+              ></i>
+              <kendo-popover
+                #campaignsPopover
+                [width]="300"
+                position="bottom"
+                class="campaignsPopover"
+              >
+                <ng-template kendoPopoverTitleTemplate>
+                  <div class="popover-title">Active campaigns Info</div>
+                </ng-template>
+  
+                <ng-template kendoPopoverBodyTemplate>
+                  <div>
+                    <p>{{ popOvercontent }}</p>
+                  </div>
+                </ng-template>
+              </kendo-popover>
+            </li>
+          </ul>
+      <kendo-tabstrip>
+        <kendo-tabstrip-tab [selected]="true">
+          <ng-template kendoTabTitle>
+            <p>Sales House</p>
+          </ng-template>
+          <ng-template kendoTabContent>
+            <kendo-chart>
+              <kendo-chart-title
+                text="Cost Variance by Sales House"
+              ></kendo-chart-title>
+              <kendo-chart-category-axis>
+                <kendo-chart-category-axis-item
+                  [categories]="['Q1', 'Q2', 'Q3', 'Q4']"
+                >
+                </kendo-chart-category-axis-item>
+              </kendo-chart-category-axis>
+              <kendo-chart-series>
+                <kendo-chart-series-item
+                  type="bar"
+                  [gap]="2"
+                  [spacing]="0.25"
+                  [data]="[100, 123, 234, 343]"
+                >
+                </kendo-chart-series-item>
+                <kendo-chart-series-item
+                  type="bar"
+                  [data]="[120, 67, 231, 196]"
+                >
+                </kendo-chart-series-item>
+                <kendo-chart-series-item
+                  type="bar"
+                  [data]="[45, 124, 189, 143]"
+                >
+                </kendo-chart-series-item>
+                <kendo-chart-series-item
+                  type="bar"
+                  [data]="[87, 154, 210, 215]"
+                >
+                </kendo-chart-series-item>
+              </kendo-chart-series>
+            </kendo-chart>
+          </ng-template>
+        </kendo-tabstrip-tab>
+
+        <kendo-tabstrip-tab>
+          <ng-template kendoTabTitle>
+            <p>Top 5 Station Packages</p>
+          </ng-template>
+          <ng-template kendoTabContent>
+            <kendo-grid [kendoGridBinding]="gridData" [height]="350">
+              <kendo-grid-column
+                *ngFor="let column of columns"
+                field="{{ column.field }}"
+                title="{{ column.title }}"
+                format="{{ column.format }}"
+                [filter]="column.type"
+              ></kendo-grid-column>
+            </kendo-grid>
+          </ng-template>
+        </kendo-tabstrip-tab>
+      </kendo-tabstrip>
+    </div>
+
+    <div class="col-md-12 mt-3">
+        <div class="costVarianceCampaign">
+            <h5>Cost Variance by Campaign Code (DCR/01/054/001 : 99.19%)</h5>
+
+            <div class="costVariable">
+                <div class="costVariableSearch">
+                    <input type="text" placeholder="Search Variable">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <ng-scrollbar>
+                <div class="costVaribaleList">
+                    <div *ngFor="let campaignList of campaignLists" class="campaignList">
+                        <h6>{{ campaignList.campaignName }}</h6>
+                        <p>{{campaignList.campaignValue}} <span>{{campaignList.percentage}}</span></p>
+                    </div>
+                </div> 
+            </ng-scrollbar>
+            </div>
+            
+            <kendo-chart>
+                <kendo-chart-series>
+                  <kendo-chart-series-item [data]="costVaribaleChart"> </kendo-chart-series-item>
+                </kendo-chart-series>
+                <kendo-chart-area background="transparent"></kendo-chart-area>
+            </kendo-chart>
+
+        </div>
+        
+    </div><!-- col-md-12 mt-3 -->
+  </div>
+</div>

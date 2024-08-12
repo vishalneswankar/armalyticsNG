@@ -1,0 +1,39 @@
+$footerColorBg:#38454a;
+$footerColorTxt:#fff;
+
+footer {
+    background: $footerColorBg;
+    font-size: 14px;
+    color: $footerColorTxt;
+    padding: 15px 0px 10px 0;
+    margin-top: 10px;
+
+    p {
+        margin-bottom: 7px;
+    }
+
+    a {
+        color: $footerColorTxt;
+        margin: 0;
+        padding-top: 0;
+        padding-left: 0;
+    }
+
+    li a:after {
+        position: absolute;
+        content: "";
+        border-right: 1px solid #fff;
+        padding: 0px 5px;
+        height: 14px;
+        display: inline-block;
+        margin-top: 4px;
+    }
+
+    li:last-child a:after {
+        content: none;
+    }
+
+    .footerImg {
+        width: 220px;
+    }
+}

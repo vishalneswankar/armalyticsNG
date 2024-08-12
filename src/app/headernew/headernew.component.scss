@@ -1,0 +1,213 @@
+:root {
+    --background-color: #ffffff;
+    --text-color: #494949;
+    --black-color:#000; 
+}
+
+
+.dark_theme {
+    --background-color: #000;
+    --text-color: #d4d2d2;
+    --black-color:#fff; 
+}
+
+body {
+    background: var(--background-color);
+    color: var(--black-color);
+}
+
+.containerWrap {
+    margin-left: 233px;
+}
+
+.header {
+    width: calc(100% - 15%);
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: #f7f9fb;
+    box-shadow: 0 4px 40px #0000001a;
+    height: 55px;
+    margin-bottom: 30px;
+    clear: both;
+    z-index: 10;
+
+    h4 {
+        position: relative;
+        left: 48px;
+        top: 17px;
+        font-size: 18px;
+        text-transform: uppercase;
+        i {
+            font-size: 14px;
+            margin-right: 6px;
+            position: relative;
+            bottom: 2px;
+        }
+    }
+
+    .menuIcon {
+        color: #000;
+        font-size: 18px;
+        position: absolute;
+        top: 14px;
+        left: 11px;
+    }
+
+    .top_head {
+        width: 100%;
+        display: flex;
+    }
+    li{
+        transition: 0.4s;
+      a {
+         color: #494949;
+         font-size: 18px;
+       }
+
+       .langIcon span {
+        font-size: 12px;
+        position: relative;
+        top: 0px;
+        left: 4px;
+       }
+       :hover {
+        color: #ff962f;
+       }
+    }
+
+    .search {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        position: relative;
+        height: 35px;
+        padding:1px 5px 5px 30px;
+        width: 280px;
+        margin: 5px;
+        font-size: 14px;
+        background: #fff;
+        margin-left: 80px;
+        margin-top: 10px;
+        input {
+            width: 100%;
+            height: 28px;
+            border: none;
+            background: #fff;
+        }
+
+        input:focus {
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+
+        i {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            color: #a5a4a4;
+        }
+    }
+
+    .menuList {
+      margin-left: auto;
+      margin-top: 4px;
+    }
+
+    .userAccount {
+        border-left: 1px solid #ccc;
+        padding: 5px 10px;
+        .fa-user {
+            height: 30px;
+            position: relative;
+            margin-right: 7px;
+        }
+        .fa-chevron-down{
+            font-size: 11px;
+            margin-left: 5px;
+            color: #abacad;
+        }
+        span {
+            font-size: 14px;
+            display: block;
+            font-weight: 600;
+            line-height: 9px;
+        }
+
+        p {
+            font-size: 11px;
+            display: inline-block;
+            color: #494949;
+            margin-bottom: 0;
+            position: relative;
+            top: 7px;
+        }
+    }
+}
+
+.navigation {
+    position: fixed;
+    width: 15%;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 4px 40px #0000001a;
+    .logo {
+        background: #022213;
+        padding: 10px 15px 10px 5px;
+        height: 55px;
+    }
+    nav {
+        margin-top: 20px;
+
+        ul {
+            padding-left: 10px;
+            li {
+                list-style: none;
+                position: relative;
+                transition: 0.4s;
+                :hover {
+                    background: #ff962f;
+                    color: #fff;
+                    transition: 0.4s;
+                }
+                :hover .dropMenuIcon {
+                    color: #fff;
+                }
+                a {
+                    padding: 15px 10px 15px 10px;
+                    display: block;
+                    color: #494949;
+                    text-decoration: none;
+                    font-size: 16px;
+                    position: relative;
+                    i{
+                        width: 30px;
+                        color: #7a7878;
+                    }
+
+                    .dropMenuIcon {
+                        position: absolute;
+                        right: 0;
+                        font-size: 10px;
+                        margin-top: 6px;
+                        color: #abacad;
+                    }
+                }
+            }
+            li:after {
+                content: "";
+                width: 96%;
+                height: 1px;
+                background: #efecec;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+            li:last-child:after{
+                content: none;
+            }
+        }
+    }
+}
