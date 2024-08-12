@@ -1,0 +1,193 @@
+{
+  "hash": "607f037d",
+  "configHash": "8ae01ac1",
+  "lockfileHash": "7e35b546",
+  "browserHash": "7a02bd33",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "599de304",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "16158523",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "734dfd9e",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "3b5d9295",
+      "needsInterop": false
+    },
+    "@angular/platform-browser/animations": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations.mjs",
+      "file": "@angular_platform-browser_animations.js",
+      "fileHash": "991f2e92",
+      "needsInterop": false
+    },
+    "@angular/platform-server": {
+      "src": "../../../../../node_modules/@angular/platform-server/fesm2022/platform-server.mjs",
+      "file": "@angular_platform-server.js",
+      "fileHash": "5a5600fe",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "9d197c06",
+      "needsInterop": false
+    },
+    "@progress/kendo-angular-buttons": {
+      "src": "../../../../../node_modules/@progress/kendo-angular-buttons/fesm2015/progress-kendo-angular-buttons.mjs",
+      "file": "@progress_kendo-angular-buttons.js",
+      "fileHash": "41981ff5",
+      "needsInterop": false
+    },
+    "@progress/kendo-angular-charts": {
+      "src": "../../../../../node_modules/@progress/kendo-angular-charts/fesm2015/progress-kendo-angular-charts.mjs",
+      "file": "@progress_kendo-angular-charts.js",
+      "fileHash": "c56c0e12",
+      "needsInterop": false
+    },
+    "@progress/kendo-angular-dateinputs": {
+      "src": "../../../../../node_modules/@progress/kendo-angular-dateinputs/fesm2015/progress-kendo-angular-dateinputs.mjs",
+      "file": "@progress_kendo-angular-dateinputs.js",
+      "fileHash": "43ce533f",
+      "needsInterop": false
+    },
+    "@progress/kendo-angular-dropdowns": {
+      "src": "../../../../../node_modules/@progress/kendo-angular-dropdowns/fesm2015/progress-kendo-angular-dropdowns.mjs",
+      "file": "@progress_kendo-angular-dropdowns.js",
+      "fileHash": "86eec284",
+      "needsInterop": false
+    },
+    "@progress/kendo-angular-grid": {
+      "src": "../../../../../node_modules/@progress/kendo-angular-grid/fesm2015/progress-kendo-angular-grid.mjs",
+      "file": "@progress_kendo-angular-grid.js",
+      "fileHash": "8adba277",
+      "needsInterop": false
+    },
+    "@progress/kendo-angular-icons": {
+      "src": "../../../../../node_modules/@progress/kendo-angular-icons/fesm2015/progress-kendo-angular-icons.mjs",
+      "file": "@progress_kendo-angular-icons.js",
+      "fileHash": "003e7f05",
+      "needsInterop": false
+    },
+    "@progress/kendo-angular-inputs": {
+      "src": "../../../../../node_modules/@progress/kendo-angular-inputs/fesm2015/progress-kendo-angular-inputs.mjs",
+      "file": "@progress_kendo-angular-inputs.js",
+      "fileHash": "f8d49bbc",
+      "needsInterop": false
+    },
+    "@progress/kendo-angular-intl": {
+      "src": "../../../../../node_modules/@progress/kendo-angular-intl/fesm2015/progress-kendo-angular-intl.mjs",
+      "file": "@progress_kendo-angular-intl.js",
+      "fileHash": "4e0432b7",
+      "needsInterop": false
+    },
+    "@progress/kendo-angular-label": {
+      "src": "../../../../../node_modules/@progress/kendo-angular-label/fesm2015/progress-kendo-angular-label.mjs",
+      "file": "@progress_kendo-angular-label.js",
+      "fileHash": "11eab853",
+      "needsInterop": false
+    },
+    "@progress/kendo-angular-layout": {
+      "src": "../../../../../node_modules/@progress/kendo-angular-layout/fesm2015/progress-kendo-angular-layout.mjs",
+      "file": "@progress_kendo-angular-layout.js",
+      "fileHash": "2920ce02",
+      "needsInterop": false
+    },
+    "@progress/kendo-angular-tooltip": {
+      "src": "../../../../../node_modules/@progress/kendo-angular-tooltip/fesm2015/progress-kendo-angular-tooltip.mjs",
+      "file": "@progress_kendo-angular-tooltip.js",
+      "fileHash": "9a54cec4",
+      "needsInterop": false
+    },
+    "ngx-scrollbar": {
+      "src": "../../../../../node_modules/ngx-scrollbar/fesm2022/ngx-scrollbar.mjs",
+      "file": "ngx-scrollbar.js",
+      "fileHash": "ee1a49c0",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "xhr2-EIATKSY6": {
+      "file": "xhr2-EIATKSY6.js"
+    },
+    "chunk-QSHEGKJQ": {
+      "file": "chunk-QSHEGKJQ.js"
+    },
+    "chunk-QYPT3UQA": {
+      "file": "chunk-QYPT3UQA.js"
+    },
+    "chunk-ODK5IZNN": {
+      "file": "chunk-ODK5IZNN.js"
+    },
+    "chunk-NQPUMHIO": {
+      "file": "chunk-NQPUMHIO.js"
+    },
+    "chunk-OWBWA4Z6": {
+      "file": "chunk-OWBWA4Z6.js"
+    },
+    "chunk-2TQ557LO": {
+      "file": "chunk-2TQ557LO.js"
+    },
+    "chunk-HXU7MQLH": {
+      "file": "chunk-HXU7MQLH.js"
+    },
+    "chunk-WWM66RFA": {
+      "file": "chunk-WWM66RFA.js"
+    },
+    "chunk-PJ5CPNHZ": {
+      "file": "chunk-PJ5CPNHZ.js"
+    },
+    "chunk-MDHWVN3Q": {
+      "file": "chunk-MDHWVN3Q.js"
+    },
+    "chunk-WLY3CAIH": {
+      "file": "chunk-WLY3CAIH.js"
+    },
+    "chunk-JIDDKRYE": {
+      "file": "chunk-JIDDKRYE.js"
+    },
+    "chunk-R34FYGCB": {
+      "file": "chunk-R34FYGCB.js"
+    },
+    "chunk-77XFE2LQ": {
+      "file": "chunk-77XFE2LQ.js"
+    },
+    "chunk-UVFYPAVO": {
+      "file": "chunk-UVFYPAVO.js"
+    },
+    "chunk-2GY5W5UB": {
+      "file": "chunk-2GY5W5UB.js"
+    },
+    "chunk-UVZZJR6W": {
+      "file": "chunk-UVZZJR6W.js"
+    },
+    "chunk-6FRD3SAH": {
+      "file": "chunk-6FRD3SAH.js"
+    },
+    "chunk-EOXLKPHL": {
+      "file": "chunk-EOXLKPHL.js"
+    },
+    "chunk-DLGLBJGM": {
+      "file": "chunk-DLGLBJGM.js"
+    },
+    "chunk-DFLAVSOJ": {
+      "file": "chunk-DFLAVSOJ.js"
+    },
+    "chunk-LDODSSGN": {
+      "file": "chunk-LDODSSGN.js"
+    }
+  }
+}
