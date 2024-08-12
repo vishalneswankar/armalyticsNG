@@ -37,3 +37,10 @@ footer {
         width: 220px;
     }
 }
+
+//New Navigation
+footer {
+    float: right;
+    width: calc(100% - 256px);
+    margin-right: 15px;
+}
